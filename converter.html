@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Time Converter</title>
+  <link rel="stylesheet" href="converter.css">
+</head>
+
+<body>
+  <div class="flex-menu">
+	<!-- Using <a> makes only the text clickable and not the entire <div> box, so onclick is used instead -->
+    <div onclick="location.href='index.html';">❱ Home ❰</div>
+	<div onclick="location.href='about.html';">❰ About ❱</div>
+	<div onclick="location.href='converter.html';" style="background-color:black">❱ Time Converter ❰</div>
+	<div onclick="location.href='research.html';">❰ Research ❱</div>
+	<div onclick="location.href='report.html';">❰ Report ❱</div>
+  </div>
+  <br><br>
+  <div class="container">
+    <div id="form">
+	<br>
+	<form name="myForm" method="post">
+      <label for="hours">Hours:</label>
+	  <input type="text" id="hours" name="hours" size="1" placeholder="12">&emsp;
+	  <label for="min">Minutes:</label>
+	  <input type="text" id="min" name="min" size="1" placeholder="30">&emsp;
+	  <label for="AMPM">AM/PM:</label>
+	  <select name="AMPM" id="AMPM">
+	    <option value="AM">AM</option>
+		<option value="PM">PM</option>
+	  </select>	
+	  <br>
+	  <label for="year">Year:</label>
+	  <input type="text" id="year" name="year" size="1" placeholder="2021">&emsp;
+	  <label for="month">Month:</label>
+	  <input type="text" id="month" name="month" size="1" placeholder="8">&emsp;
+	  <label for="day">Day:</label>
+	  <input type="text" id="day" name="day" size="1" placeholder="20">
+	  <br><br>
+	  <label for="fromZone">Time Zone 1:</label>
+	  <select name="fromZone" id="fromZone" required>
+	    <option value="N12">Pacific | Baker Island (-12:00)</option>
+		<option value="N11">Pacific | Pago Pago (-11:00)</option>
+		<option value="N10">Pacific | Honolulu (-10:00)</option>
+		<option value="N9">America | Anchorage (-09:00)</option>
+		<option value="N8">America | Los Angeles (-08:00)</option>
+		<option value="N7">America | Phoenix (-7:00)</option>
+		<option value="N6">America | Mexico City (-06:00)</option>
+		<option value="N5">America | New York (-05:00)</option>
+		<option value="N4">America | Santiago (-04:00)</option>
+		<option value="N3">America | São Paulo (-03:00)</option>
+		<option value="N2">America | Saint-Pierre (-02:00)</option>
+		<option value="N1">Atlantic | Praia (-01:00)</option>
+		<option value="0" selected>Europe | London (±00:00)</option>
+		<option value="P1">Africa | Lagos (+01:00)</option>
+		<option value="P2">Africa | Cairo (+02:00)</option>
+		<option value="P3">Europe | Moscow (+03:00)</option>
+		<option value="P4">Asia | Dubai (+04:00)</option>
+		<option value="P430">Asia | Kabul (+04:30)</option>
+		<option value="P5">Asia | Karachi (+05:00)</option>
+		<option value="P530">Asia | Delhi (+05:30)</option>
+		<option value="P6">Asia | Dhaka (+06:00)</option>
+		<option value="P630">Asia | Yangon (+06:30)</option>
+		<option value="P7">Asia | Jakarta (+07:00)</option>
+		<option value="P8">Asia | Guangzhou (+08:00)</option>
+		<option value="P9">Asia | Toyko (+09:00)</option>
+		<option value="P10">Australia | Sydney (+10:00)</option>
+		<option value="P11">Asia | Yuzhno-Sakhalinsk (+11:00)</option>
+		<option value="P12">Pacific | Auckland (+12:00)</option>
+		<option value="P13">Pacific | Apia (+13:00)</option>
+		<option value="P14">Pacific | Kiritimati (+14:00)</option>
+	  </select>
+	  <br><br>
+	  <label for="toZone">Time Zone 2:</label>
+	  <select name="toZone" id="toZone" required>
+	    <option value="N12">Pacific | Baker Island (-12:00)</option>
+		<option value="N11">Pacific | Pago Pago (-11:00)</option>
+		<option value="N10">Pacific | Honolulu (-10:00)</option>
+		<option value="N9">America | Anchorage (-09:00)</option>
+		<option value="N8">America | Los Angeles (-08:00)</option>
+		<option value="N7">America | Phoenix (-7:00)</option>
+		<option value="N6">America | Mexico City (-06:00)</option>
+		<option value="N5">America | New York (-05:00)</option>
+		<option value="N4">America | Santiago (-04:00)</option>
+		<option value="N3">America | São Paulo (-03:00)</option>
+		<option value="N2">America | Saint-Pierre (-02:00)</option>
+		<option value="N1">Atlantic | Praia (-01:00)</option>
+		<option value="0" selected>Europe | London (±00:00)</option>
+		<option value="P1">Africa | Lagos (+01:00)</option>
+		<option value="P2">Africa | Cairo (+02:00)</option>
+		<option value="P3">Europe | Moscow (+03:00)</option>
+		<option value="P4">Asia | Dubai (+04:00)</option>
+		<option value="P430">Asia | Kabul (+04:30)</option>
+		<option value="P5">Asia | Karachi (+05:00)</option>
+		<option value="P530">Asia | Delhi (+05:30)</option>
+		<option value="P6">Asia | Dhaka (+06:00)</option>
+		<option value="P630">Asia | Yangon (+06:30)</option>
+		<option value="P7">Asia | Jakarta (+07:00)</option>
+		<option value="P8">Asia | Guangzhou (+08:00)</option>
+		<option value="P9">Asia | Toyko (+09:00)</option>
+		<option value="P10">Australia | Sydney (+10:00)</option>
+		<option value="P11">Asia | Yuzhno-Sakhalinsk (+11:00)</option>
+		<option value="P12">Pacific | Auckland (+12:00)</option>
+		<option value="P13">Pacific | Apia (+13:00)</option>
+		<option value="P14">Pacific | Kiritimati (+14:00)</option>
+	  </select>
+	  <br><br>
+	  <button type="button" id="formSubmit">Submit</button>
+	  <br><br>
+    </form>
+	</div>
+	<div id="diff">
+	  <br><br><br>
+	  <p class="container-time-label" id="difference">Time 1 is <span id="dHours">0</span> hours and <span id="dMin">0</span> minutes <span id="aheadBehind">apart from</span> time 2.</p>
+	  <br><br><br>
+	</div>
+  </div>
+  <br>
+  <div class="container">
+    <div id="zone1">
+	  <p class="container-time-label"><span id="fromTimeZone">Time Zone 1</span></p>
+	  <p id="fromTime">00:00 AM</p>
+	  <p id="fromDate">Date 1</p>
+	</div>
+	<div id="zone2">
+	  <p class="container-time-label"><span id="toTimeZone">Time Zone 2</span></p>
+	  <p id="toTime">00:00 AM</p>
+	  <p id="toDate">Date 2</p>
+	</div>
+  </div>
+  <script defer src="converter.js"></script>
+</body>
+</html>

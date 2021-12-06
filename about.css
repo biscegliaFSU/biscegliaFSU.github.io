@@ -1,0 +1,80 @@
+* {
+	font-family: cambria;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+p {
+	font-size: 25px;
+}
+.flex-menu {
+	display: flex;
+	background-color: white;
+	justify-content: space-between;
+	align-items: center;
+	float: top;
+	height: 30px;
+	
+}
+.flex-menu > div {
+	text-align: center;
+	color: white;
+	background-color: blue;
+	font-size: 25px;
+	flex-grow: 1;
+	padding: 10px;
+	border: 2px solid white;
+	width: 25%;
+	transition: transform .2s;
+}
+.flex-menu > div:hover {
+	background-color: black;
+	color: white;
+	transform: scale(1.05);
+	cursor: pointer;
+}
+.section {
+	text-align: left;
+	border-radius: 25px;
+	border: 5px solid blue;
+	padding: 10px;
+}
+.section > h1, h2 {
+	text-align: center;
+}
+.current-time {
+	width: 20%;
+}
+#local, #UTC, #UTC1200, #UTC0500, #UTC1400 {
+	text-align: center;
+	border: 5px solid gray;
+	width: 40%;
+	border-radius: 25px;
+}
+.current-time-label {
+	font-size: 25px;
+}
+.time, #timeLocal, #timeUTC {
+	font-size: 45px;
+	font-family: monospace;
+	letter-spacing: 8px;
+}
+.date, #dateLocal, #dateUTC {
+	font-size: 25px;
+}
+.day {
+	color: black;
+	background-image: radial-gradient(white, #87CEEB);
+}
+.night {
+	color: white;
+	background-image: radial-gradient(gray 1%, #000010 99%);
+}
+.transition {
+	color: black;
+	background-image: radial-gradient(#FFE373, #FC9C54);
+}
+.three-days {
+	display: flex;
+}

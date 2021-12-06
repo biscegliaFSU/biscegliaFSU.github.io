@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+  <div class="flex-menu">
+	<!-- Using <a> makes only the text clickable and not the entire <div> box, so onclick is used instead -->
+    <div onclick="location.href='index.html';">❰ Home ❱</div>
+	<div onclick="location.href='about.html';" style="background-color:black">❱ About ❰</div>
+	<div onclick="location.href='converter.html';">❰ Time Converter ❱</div>
+	<div onclick="location.href='research.html';">❰ Research ❱</div>
+	<div onclick="location.href='report.html';">❰ Report ❱</div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="section">
+    <h1>History of Time Zones</h1>
+    <p>Before the 19th century, time was calculated locally and there was no global standard of time. Clocks would usually be run by organizations such as churches and governments, and the exact time would rarely be important, especially for the general public. This changed with the industrial revolution, where railroads began to expand across nations. Railroads were the fastest form of travel at the time, and faced the problem of differing times at different stations. Most towns did not have an extremely accurate clock, so times could vary significantly between train stations, which made scheduling difficult. The invention of the telegraph and telephone also contributed to the need for time zones, as communications could now be sent across countries in just seconds.</p>
+	<p>In the 19th century, the idea of a global map of different time zones developed as the world industrialized and became more interconnected. The ‘center’ of the map was chosen to be the Greenwich observatory in London and designated as ±00:00. This became the modern Universal Coordinated Time, and all time zones were described by how much they were offset from this time.</p>
+  </div>
+  <br>
+  <div class="section">
+    <h1>Unusual Time Zones</h1>
+	<h2>30-Minute Offsets</h2>
+	  <p>While most time zones are offset by a number of hours, a few use an offset of 30 minutes as well. This offset is added to better match the time with the natural sunrises and sunsets. Three examples of this are UTC+05:30, UTC+04:30, and UTC+06:30. Indian Standard Time (IST) is offset from UTC by 5 hours and 30 minutes, and is the same across the entire country, making UTC+05:30 the second most populous time zone in the world due to India’s large population. UTC+04:30 is used in Afghanistan year-round (AFT) and in Iran for its daylight saving time (IRDT), which uses UTC+03:30 for its standard time (IRST). Additionally, UTC+06:30 is used in Myanmar year-round.</p>
+	<h2>UTC+14:00 and UTC+13:00</h2>
+	  <p>There are two time zone offsets that go beyond 12 hours. This is because time zones are subject to political forces and do not follow the strict longitude lines. Kiribati, a small ocean nation in the Pacific, would normally have a time zone of UTC-10:00 according to its longitude. However, Kiribati skipped an entire day to change to UTC+14:00 for political reasons. The nation had closer ties with Australia and East Asian nations like China and Japan, so it changed its time to be closer to those other countries. This zone is the first to experience a new day, and sees the sunrise at the same time as UTC-10:00, but is 24 hours ahead. As a result, there is a two-hour period each day where it is simultaneously three different dates at the same time, as shown below:</p>
+	<div class="three-days">
+    <div class="night" id="UTC1200">
+	  <p class="current-time-label">International Waters (UTC-12:00)</p>
+	  <p class="time">11:45 PM</p>
+	  <p class="date">Sunday 5 December 2021</p>
+	</div>
+	<div class="transition" id="UTC0500">
+	  <p class="current-time-label">Eastern Standard Time (UTC-05:00)</p>
+	  <p class="time">6:45 AM</p>
+	  <p class="date">Monday 6 December 2021</p>
+	</div>
+	<div class="night" id="UTC1400">
+	  <p class="current-time-label">Line Islands Time (UTC+14:00)</p>
+	  <p class="time">1:45 AM</p>
+	  <p class="date">Tuesday 7 December 2021</p>
+	</div>
+  </div>
+  </div>
+</body>
+</html>

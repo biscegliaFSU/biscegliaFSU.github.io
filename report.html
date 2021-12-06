@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Report</title>
+  <link rel="stylesheet" href="about.css">
+  <style>
+	table, th, td {
+		border: 1px solid black;
+	}
+	th, td {
+		padding: 5px 20px;
+	}
+   </style>
+</head>
+
+<body>
+  <div class="flex-menu">
+	<!-- Using <a> makes only the text clickable and not the entire <div> box, so onclick is used instead -->
+    <div onclick="location.href='index.html';">❰ Home ❱</div>
+	<div onclick="location.href='about.html';">❰ About ❱</div>
+	<div onclick="location.href='converter.html';">❰ Time Converter ❱</div>
+	<div onclick="location.href='research.html';">❰ Research ❱</div>
+	<div onclick="location.href='report.html';" style="background-color:black">❱ Report ❰</div>
+  </div>
+	  <h1 style="text-align:center">Project Report</h1>
+	  <h2 style="text-align:center">Nicholas Bisceglia<br>Web Programming (CSC 3050-01)<br>Friday 3 December 2021</h2>
+	  <h3>Approach & Methodology</h3>
+	  <p>When I first planned the project, I intended to complete the HTML pages first, then the CSS for those pages, and then the JavaScript. However, I did not use this approach because I found that it was better to create the three at the same time, due to how connected they were. The CSS determined how the HTML appeared, so I wrote both at the same time in order to produce the desired visual result. The JavaScript required many references in the HTML as well, such as item IDs, so I worked on all three together for each page.</p>
+	  <p>I started with the hardest page first, the menu with all of the different time zone clocks. This allowed me to then use portions of this page’s HTML, CSS, and JavaScript in the other pages as well, reducing the amount of work I had to do for parts where the same elements were used. To make all of these clocks constantly change, I used a function that looped once per second. Each second, it gets the time and then applies the necessary offsets for each time zone, checks to make sure the date of the week is right, and then changes the background of the element if necessary depending on if it’s day, night, evening, or dawn.</p>
+	  <h3>Evaulation</h3>
+	  <p>Evaluating my project with regard to my original plan, there is a major part that I made changes to. I originally planned to have a separate about page for each time zone, but I realized that this would be very time consuming and would just be the same HTML page copied 30 times with minor changes. As a result, I instead chose to have a single about page that provided information about time zones in general.</p>
+	  <h3>Discussion</h3>
+	  <p>When working on this project, I believe that the CSS design was my weakest point while the JavaScript was the strongest part of the project. The JavaScript took the most time out of the three parts to complete due to the complex ways that I had to use and manipulate the Date object to convert to other time zones and find the difference between zones, as well as properly formatting everything for display.</p>
+	  <h3>Timeline</h3>
+	  <p>See table below for the timeline of the project.</p>
+	  <h3>Future Work</h3>
+	  <p>An idea for future work relating to this project would be the implementation of the weather app that was done previously as a lab in class. It would likely be possible to use the weather app’s API to find the user’s location and time zone without relying on the Date default constructor to do this. Weather information could also be shown for each time zone.</p>
+	  <table>
+		<tr>
+			<th>Tasks</th>
+			<th>Description</th>
+			<th>Date</th></tr>
+		</tr>
+		<tr>
+			<td>Research</td>
+			<td>Brainstorm different project ideas, research similar existing sites, and decide on a concept.</td>
+			<td>27 October - 3 November</td>
+		</tr>
+		<tr>
+			<td>Home page</td>
+			<td>Write the HTML, CSS, and JavaScript for the main page. Some of this code can be reused in the following pages, reducing the work needed for the project.</td>
+			<td>3 - 15 November</td>
+		</tr>
+		<tr>
+			<td>About</td>
+			<td>The about page consists mainly of HTML with a little CSS and JavaScript. This one will require research in order to provide an overview about time zones.</td>
+			<td>15 - 22 November</td>
+		</tr>
+		<tr>
+			<td>Time Converter</td>
+			<td>Write the JavaScript for the time converter and test it, and create the HTML form to input the needed data.</td>
+			<td>22 November - 1 December</td>
+		</tr>
+		<tr>
+			<td>Presentation</td>
+			<td>Prepare for the presentation of the website in class on 6 December.</td>
+			<td>1 - 6 December</td>
+		</tr>
+  
+</body>
+</html>

@@ -1,0 +1,77 @@
+* {
+	font-family: cambria;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+.flex-menu {
+	display: flex;
+	background-color: white;
+	justify-content: space-between;
+	align-items: center;
+	float: top;
+	height: 30px;
+}
+.flex-menu > div {
+	text-align: center;
+	color: white;
+	background-color: blue;
+	font-size: 25px;
+	flex-grow: 1;
+	padding: 10px;
+	border: 2px solid white;
+	width: 25%;
+	transition: transform .2s;
+}
+.flex-menu > div:hover {
+	background-color: black;
+	color: white;
+	transform: scale(1.05);
+	cursor: pointer;
+}
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#form, #diff, #zone1, #zone2 {
+	text-align: center;
+	border: 5px solid gray;
+	width: 40%;
+	border-radius: 25px;
+}
+#form, #diff {
+	background-color: lightblue;
+	border: 5px solid blue;
+	font-size: 20px;
+}
+#hours, #min, #AMPM, #year, #month, #day {
+	font-size: 20px;
+}
+#fromZone, #toZone {
+	font-size: 20px;
+}
+.container-time-label {
+	font-size: 25px;
+}
+#fromTime, #toTime{
+	font-size: 45px;
+	font-family: monospace;
+	letter-spacing: 8px;
+}
+#fromDate, #toDate {
+	font-size: 25px;
+}
+.day {
+	color: black;
+	background-image: radial-gradient(white, #87CEEB);
+}
+.night {
+	color: white;
+	background-image: radial-gradient(gray 1%, #000010 99%);
+}
+.transition {
+	color: black;
+	background-image: radial-gradient(#FFE373, #FC9C54);
+}

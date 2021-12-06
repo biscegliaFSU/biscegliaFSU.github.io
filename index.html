@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Time Zones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="flex-menu">
+	<!-- Using <a> makes only the text clickable and not the entire <div> box, so onclick is used instead -->
+    <div onclick="location.href='index.html';" style="background-color:black">❱ Home ❰</div>
+	<div onclick="location.href='about.html';">❰ About ❱</div>
+	<div onclick="location.href='converter.html';">❰ Time Converter ❱</div>
+	<div onclick="location.href='research.html';">❰ Research ❱</div>
+	<div onclick="location.href='report.html';">❰ Report ❱</div>
+  </div>
+  <br>
+  <div class="current-time">
+    <div id="local">
+	  <p class="current-time-label">Local Time: <span id="local-timezone">LocalTimeZone</span> (UTC<span id="offset">Offset</span>)</p>
+	  <p id="timeLocal">00:00:00 AM</p>
+	  <p id="dateLocal">Wednesday 22 September 2021</p>
+	</div>
+	<div id="UTC">
+	  <p class="current-time-label">Universal Coordinated Time (UTC±00:00)</p>
+	  <p id="timeUTC">00:00:00 AM</p>
+	  <p id="dateUTC">Wednesday 22 September 2021</p>
+	</div>
+  </div>
+  <br>
+  <div class="flex-timezones">
+    <div id="d0"><p><b>UTC-12:00</b><br><p id="0">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d1"><p><b>UTC-11:00</b><br><p id="1">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d2"><p><b>UTC-10:00</b><br><p id="2">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d3"><p><b>UTC-09:00</b><br><p id="3">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d4"><p><b>UTC-08:00</b><br><p id="4">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d5"><p><b>UTC-07:00</b><br><p id="5">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d6"><p><b>UTC-06:00</b><br><p id="6">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d7"><p><b>UTC-05:00</b><br><p id="7">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d8"><p><b>UTC-04:00</b><br><p id="8">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d9"><p><b>UTC-03:00</b><br><p id="9">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d10"><p><b>UTC-02:00</b><br><p id="10">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d11"><p><b>UTC-01:00</b><br><p id="11">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d12"><p><b>UTC±00:00</b><br><p id="12">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d13"><p><b>UTC+01:00</b><br><p id="13">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d14"><p><b>UTC+02:00</b><br><p id="14">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d15"><p><b>UTC+03:00</b><br><p id="15">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d16"><p><b>UTC+04:00</b><br><p id="16">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d17"><p><b>UTC+04:30</b><br><p id="17">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d18"><p><b>UTC+05:00</b><br><p id="18">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d19"><p><b>UTC+05:30</b><br><p id="19">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d20"><p><b>UTC+06:00</b><br><p id="20">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d21"><p><b>UTC+06:30</b><br><p id="21">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d22"><p><b>UTC+07:00</b><br><p id="22">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d23"><p><b>UTC+08:00</b><br><p id="23">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d24"><p><b>UTC+09:00</b><br><p id="24">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d25"><p><b>UTC+10:00</b><br><p id="25">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d26"><p><b>UTC+11:00</b><br><p id="26">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d27"><p><b>UTC+12:00</b><br><p id="27">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d28"><p><b>UTC+13:00</b><br><p id="28">00:00 AM<br>Wednesday</p></p></div>
+	<div id="d29"><p><b>UTC+14:00</b><br><p id="29">00:00 AM<br>Wednesday</p></p></div>
+	<!-- -09:30, +04:30, +05:45, +06:30, +09:30, +10:30 -->
+  </div>
+  <script defer src="scripts.js"></script>
+</body>
+</html>
