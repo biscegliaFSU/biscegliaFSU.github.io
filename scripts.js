@@ -41,7 +41,8 @@ offset = offset.slice(0, 3) + ":" + offset.slice(3, 5);
 document.getElementById('offset').innerHTML = offset;
 
 //3,600,000 milliseconds in an hour and 60,000 in a minute
-const amountToAdd = [3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,3600000,1800000,1800000,1800000,1800000,1800000,1800000,3600000,3600000,3600000,3600000,3600000,3600000,3600000];
+const amountToAdd = [3600000,3600000,3600000,1800000,1800000,3600000,3600000,3600000,3600000,3600000,1800000,1800000,1800000,1800000,3600000,3600000,3600000,3600000,3600000,1800000,1800000,1800000,1800000,1800000,900000,900000,1800000,1800000,3600000,2700000,900000,1800000,1800000,1800000,1800000,3600000,2700000,900000,2700000,900000];
+//                   -12:00  -11:00  -10:00  -09:30  -09:00  -08:00  -07:00  -06:00  -05:00  -04:00  -03:30  -03:00  -02:30  -02:00  -01:00  ±00:00  +01:00  +02:00  +03:00  +03:30  +04:00  +04:30  +05:00  +05:30  +05:45 +06:00 +06:30  +07:00  +08:00  +08:45  +09:00 +09:30  +10:00  +10:30  +11:00  +12:00  +12:45  +13:00 +13:45  +14:00
 currentTimeUpdate();
 
 function currentTimeUpdate () {
@@ -53,10 +54,10 @@ function currentTimeUpdate () {
 	timeUTC = to12Hour(timeUTC);
 	document.getElementById('timeLocal').innerHTML = timeLocal;
 	document.getElementById('timeUTC').innerHTML = timeUTC;
-	
+
 	time.setTime(time.getTime() - 46800000);
 	//document.getElementById(0).innerHTML = to12Hour(time.toUTCString().substr(time.toUTCString().indexOf(':') - 2, 8))+'<br>'+daysOfWeek[time.getUTCDay()];
-	for (i = 0; i < 30; i++) {
+	for (i = 0; i < 40; i++) {
 		time.setTime(time.getTime() + amountToAdd[i]);
 		document.getElementById(i).innerHTML = to12Hour(time.toUTCString().substr(time.toUTCString().indexOf(':') - 2, 8))+'<br>'+daysOfWeek[time.getUTCDay()];
 		if (isNight(time.getUTCHours())) {
