@@ -80,7 +80,11 @@ function currentTimeUpdate () {
 function to12Hour (s) {
 	let hour = new Number(s.slice(0, 2));
 	if (hour > 12) {
-        s = (hour - 12) + s.slice(2, 8) + " PM";
+		if (hour < 10) {
+			s = "0" + (hour - 12) + s.slice(2, 8) + " PM";
+		} else {
+			s = (hour - 12) + s.slice(2, 8) + " PM";
+		}
 	} else if (hour == 12) {
     	s = hour + s.slice(2, 8) + " PM";
     } else if (hour == 0) {
