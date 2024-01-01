@@ -59,7 +59,7 @@ function currentTimeUpdate () {
 	//document.getElementById(0).innerHTML = to12Hour(time.toUTCString().substr(time.toUTCString().indexOf(':') - 2, 8))+'<br>'+daysOfWeek[time.getUTCDay()];
 	for (i = 0; i < 40; i++) {
 		time.setTime(time.getTime() + amountToAdd[i]);
-		document.getElementById(i).innerHTML = to12Hour(time.toUTCString().substr(time.toUTCString().indexOf(':') - 2, 8))+'<br>'+daysOfWeek[time.getUTCDay()];
+		document.getElementById(i).innerHTML = to12Hour(time.toUTCString().substr(time.toUTCString().indexOf(':') - 2, 8))+'<br>'+daysOfWeek[time.getUTCDay()]+' ('+time.getUTCDate()+')';
 		if (isNight(time.getUTCHours())) {
 			document.getElementById('d'+i).classList.add('night');
 			document.getElementById('d'+i).classList.remove('day');
